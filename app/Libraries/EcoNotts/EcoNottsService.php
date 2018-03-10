@@ -17,14 +17,15 @@ class EcoNottsService
 
     }
 
-    public function sendReport($data)
+    public function sendReport($params)
     {
+        \Log::info('Submitting: ' . print_r($params, true));
         $path = "straws/report";
 
         try {
            
             $data = [
-                'body' => json_encode($data),
+                'body' => json_encode($params),
                 'headers' => [],
             ];
 

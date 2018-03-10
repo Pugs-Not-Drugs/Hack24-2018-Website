@@ -28,7 +28,7 @@ class StrawsController extends Controller
     {        
         if ($this->request->isMethod('POST')) {
 
-            $ecoNottsService->sendReport($this->request->all());
+            $ecoNottsService->sendReport($this->request->except(['_token', 'company_id']));
 
             // happy days - flash message
             $this->request->session()->flash(
