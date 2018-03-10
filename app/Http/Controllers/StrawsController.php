@@ -36,7 +36,7 @@ class StrawsController extends Controller
                 'Thank you for reporting!'
             );
 
-            return redirect('/straws');
+            return redirect('/');
         }
 
         // display the form

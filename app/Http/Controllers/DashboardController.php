@@ -15,7 +15,11 @@ class DashboardController extends Controller
     }
 
     public function index() {
-        return view('pages.dashboard.index');
+        
+        $success_message = $this->request->session()->get('success_message');
+
+        return view('pages.dashboard.index', ['success_message' => $success_message, 'strawPercentage' => rand(0, 100)]);
+
 
     }
 }
