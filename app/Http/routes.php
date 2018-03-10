@@ -16,4 +16,6 @@ Route::get('/', 'DashboardController@index');
 Route::get('/straws', 'StrawsController@index');
 Route::match(['get', 'post'], '/straws/report', 'StrawsController@report');
 
+Route::get('/food-banks', 'FoodBankController@index');
+
 Route::get('/ajax/companies/search', 'StrawsController@searchCompanies');

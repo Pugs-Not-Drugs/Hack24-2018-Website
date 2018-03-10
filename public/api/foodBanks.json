@@ -20,7 +20,8 @@
             "Cereal",
             "Biscuits"
         ] ,
-		"lat_long": "52.9341373,-1.2176444,17"
+        "latitude": "52.9341373",
+        "longitude": "-1.2176444"
     },
     {
         "name": "Arnold Foodbank",
@@ -61,7 +62,8 @@
         "items_plenty": [
             "Beans"
         ],
-		"lat_long": "52.9958099,-1.1398624,17"
+        "latitude": "52.9958099",
+        "longitude": "-1.1398624"
     },
     {
         "name": "Clifton Foodbank",
@@ -89,7 +91,8 @@
             "Sugar",
             "Pasta"
         ],
-		"lat_long": "52.9110859,-1.1723989,17"
+        "latitude": "52.9110859",
+        "longitude": "-1.1723989"
     },
     {
          "name": "Bestwood & Bulwell Foodbank",
@@ -117,7 +120,8 @@
             "Breakfast Cereal",
             "Pasta"
         ],
-		"lat_long": "53.0049679,-1.1718383,17"
+        "latitude": "53.0049679",
+        "longitude": "-1.1718383"
     },
     {
          "name": "Long Eaton & Sawley Foodbank",
@@ -158,7 +162,8 @@
             "Dried Pasta",
             "Tinned Spaghetti"
         ],
-		"lat_long": "52.9020526,-1.2840793,17"
+        "latitude": "52.9020526",
+        "longitude": "-1.2840793"
     },
     {
           "name": "Coalville Foodbank",
@@ -187,7 +192,8 @@
             "Soup",
             "Cereal"
         ],
-		"lat_long": "52.7242746,-1.3780677,17"
+        "latitude": "52.7242746",
+        "longitude": "-1.3780677"
     },
     {
          "name": "Ashby Foodbank",
@@ -211,7 +217,8 @@
             "Beans",
             "Sugar"
         ],
-		"lat_long": "52.7458055,-1.4787489"
+        "latitude": "52.7458055",
+        "longitude": "-1.4787489"
     },
     {
          "name": "Rutland Foodbank",
@@ -251,6 +258,7 @@
             "Most Tinned Goods",
             "Shower Gel & Soap"
         ],
-		"lat_long": "52.6706591,-0.7361031,16.94"
+        "latitude": "52.6706591",
+        "longitude": "-0.7361031"
     }
 ]

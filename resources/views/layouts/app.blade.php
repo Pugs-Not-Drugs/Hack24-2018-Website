@@ -43,6 +43,7 @@
                         <img src="/images/EcoNotts_Logo.png" style="max-height: 100px;">
                         <a href="/" style="margin-right: 20px;">Home</a>
                         <a href="/straws" style="margin-right: 20px;">Straws</a>
+                        <a href="/food-banks" style="margin-right: 20px;">Food Banks</a>
                     </div>
                 </div>
 

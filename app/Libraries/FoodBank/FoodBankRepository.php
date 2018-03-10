@@ -13,6 +13,10 @@ class FoodBankRepository {
     }
 
 
+    public function all() {
+        return $this->foodBanks;
+    }
+
 
     protected function generateFoodBanks() {
         
