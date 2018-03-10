@@ -41,8 +41,12 @@
                 <div class="col-sm-7">
                     <div class="header-left">
                         <img src="/images/EcoNotts_Logo.png" style="max-height: 100px;">
+
+                        <a href="/straws" style="margin-right: 20px;">Straws</a>
+                        <a href="/air-pollution">Air Pollution</a>
                     </div>
                 </div>
+
 
                 {{--  <div class="col-sm-5">
                     <div class="user-area dropdown float-right">
@@ -89,23 +93,25 @@
         @yield('content')
 
         
-
-    <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
+    <script>
+        var strawPercentage = {{ !empty($strawPercentage) ? $strawPercentage : 0 }};
+    </script>
+    <script src="/assets/js/vendor/jquery-2.1.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/main.js"></script>
 
 
-    <script src="assets/js/lib/chart-js/Chart.bundle.js"></script>
-    <script src="assets/js/dashboard.js"></script>
-    <script src="assets/js/widgets.js"></script>
-    <script src="assets/js/lib/vector-map/jquery.vmap.js"></script>
-    <script src="assets/js/lib/vector-map/jquery.vmap.min.js"></script>
-    <script src="assets/js/lib/vector-map/jquery.vmap.sampledata.js"></script>
-    <script src="assets/js/lib/vector-map/country/jquery.vmap.world.js"></script>
+    <script src="/assets/js/lib/chart-js/Chart.bundle.js"></script>
+    <script src="/assets/js/dashboard.js"></script>
+    <script src="/assets/js/widgets.js"></script>
+    <script src="/assets/js/lib/vector-map/jquery.vmap.js"></script>
+    <script src="/assets/js/lib/vector-map/jquery.vmap.min.js"></script>
+    <script src="/assets/js/lib/vector-map/jquery.vmap.sampledata.js"></script>
+    <script src="/assets/js/lib/vector-map/country/jquery.vmap.world.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
 
-    <script src="assets/js/c3.min.js"></script>
+    <script src="/assets/js/c3.min.js"></script>
     <script>
         ( function ( $ ) {
             "use strict";

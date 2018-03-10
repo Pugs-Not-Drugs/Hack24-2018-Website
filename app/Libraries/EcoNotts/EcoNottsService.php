@@ -12,15 +12,15 @@ class EcoNottsService
 
     public function __construct(Client $guzzle)
     {
-        $this->endpoint = 'https: //econotts-api.azurewebsites.net/api/';
+        $this->endpoint = 'https://a8000c76.ngrok.io/api/';
         $this->guzzle = $guzzle;
-
     }
 
     public function sendReport($params)
     {
+        
         \Log::info('Submitting: ' . print_r($params, true));
-        $path = "straws/report";
+        $path = "Establishment/add";
 
         try {
            
@@ -28,7 +28,7 @@ class EcoNottsService
                 'body' => json_encode($params),
                 'headers' => [],
             ];
-
+            \Log::info($this->endpoint . $path);
             $response = $this->guzzle->post(
                 $this->endpoint . $path,
                 $data
@@ -38,7 +38,7 @@ class EcoNottsService
 
             // get the body of the response
             $body = json_decode($response->getBody());
-
+            dd($body);
             // Ensure we successfully decoded the response
             if (json_last_error() !== JSON_ERROR_NONE) {
                 throw new \App\Exceptions\RequestException("Failed to decode JSON response: " . json_last_error());
@@ -49,9 +49,10 @@ class EcoNottsService
         } catch (RequestException $e) {
             // we have had a bad response
             $response = $e->getResponse();
-            \Log::info(print_r($response, true));
+            $body = json_decode($response->getBody()->getContents());
+            dd($response, $body);
             // $body = json_decode($response->getBody()->getContents());
-
+            
             return true;
         }
 

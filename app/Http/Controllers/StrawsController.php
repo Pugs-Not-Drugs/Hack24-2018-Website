@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Libraries\Bing\BingService;
+use App\Libraries\Google\GoogleService;
 use App\Libraries\EcoNotts\EcoNottsService;
 
 class StrawsController extends Controller
@@ -21,7 +21,7 @@ class StrawsController extends Controller
     {
         $success_message = $this->request->session()->get('success_message');
 
-        return view('pages.straws.index', ['success_message' => $success_message]);
+        return view('pages.straws.index', ['success_message' => $success_message, 'strawPercentage' => rand(0, 100)]);
     }
 
     public function report(EcoNottsService $ecoNottsService) 
@@ -44,11 +44,11 @@ class StrawsController extends Controller
 
     }
 
-    public function searchCompanies(BingService $bingService)
+    public function searchCompanies(GoogleService $googleService)
     {
         $query = $this->request->input('q');
 
-        $companies = $bingService->searchCompanies($query);
+        $companies = $googleService->searchCompanies($query);
 
         return response()->json($companies);
     }

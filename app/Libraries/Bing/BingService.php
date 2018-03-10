@@ -25,15 +25,17 @@ class BingService
                 "spatialFilter" => "nearby('Nottingham',100)",
                 "entityType" => "Business",
                 '$format'   => 'json',
-                "key"       =>  env('BING_MAP_KEY'),
-                "keywords"  => $keywords
+                '$filter' => "StartsWith(DisplayName,'" . $keywords . "')",
+                "key"       =>  env('BING_MAP_KEY')
             ];
+            
 
             $data = [
                 'body' => json_encode([]),
                 'headers' => []
             ];
-
+            \Log::info($this->endpoint . '?' . http_build_query($queryParams));
+            \Log::info(print_r($queryParams, true));
             $response = $this->guzzle->get(
                 $this->endpoint . '?' . http_build_query($queryParams), 
                 $data
@@ -43,6 +45,7 @@ class BingService
 
             // get the body of the response
             $body = json_decode($response->getBody());
+            \Log::info(print_r($body, true));
             
             // Ensure we successfully decoded the response
             if (json_last_error() !== JSON_ERROR_NONE) {

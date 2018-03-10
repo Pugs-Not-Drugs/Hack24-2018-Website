@@ -17,6 +17,7 @@
             <div class="page-title">
                 <ol class="breadcrumb text-right">
                     <li><a href="/">Dashboard</a></li>
+                    <li><a href="/straws">Straws</a></li>
                     <li class="active">Report a Straw</li>
                 </ol>
             </div>
@@ -36,28 +37,22 @@
         </div>
     @endif
 
-
     <div class="col-sm-6 col-lg-6 offset-md-3">
         <div class="card text-white bg-flat-color-1" style="background-color: #B8D36D">
             <div class="card-body pb-0">
                 <form method="POST">
                     {{ csrf_field() }}
                     
-                    <input type="hidden" id="hidden-bing-id" name="BingEntityID">
-                    <input type="hidden" id="hidden-business-name" name="BusinessName">
-                    <input type="hidden" id="hidden-address-line" name="Address[AddressLine]">
-                    <input type="hidden" id="hidden-address-locality" name="Address[Locality]">
-                    <input type="hidden" id="hidden-address-postcode" name="Address[PostalCode]">
-                    <input type="hidden" id="hidden-address-latitude" name="Address[Latitude]">
-                    <input type="hidden" id="hidden-address-longitude" name="Address[Longitude]">
-
-                    <input type="hidden" id="hidden-photograph-url" name="PhotographURL">
+                    <input type="hidden" id="hidden-bing-id" name="Id">
+                    <input type="hidden" id="hidden-business-name" name="Name">
+                    <input type="hidden" id="hidden-address-latitude" name="Latitude">
+                    <input type="hidden" id="hidden-address-longitude" name="Longitude">
 
                     <label for="select-venue">Select a Venue</label><br>
-                    <select id="select-venue" name="company_id" style="width: 400px;"></select>
+                    <select id="select-venue" name="company_id" style="width: 100%;"></select>
                     <br><br>
-                    <input id="radio-straws-no" type="radio" name="UsingStraws" value="0" checked><label for="radio-straws-no" style="margin-left: 10px;"> The Venue did not have Plastic straws</label><br>
-                    <input id ="radio-straws-yes" type="radio" name="UsingStraws" value="1"><label for="radio-straws-yes" style="margin-left: 10px; margin-bottom: 15px;">The Venue used Plastic straws</label>
+                    <input id="radio-straws-no" type="radio" name="Straws" value="0" checked><label for="radio-straws-no" style="margin-left: 10px;"> The Venue did not have Plastic straws</label><br>
+                    <input id ="radio-straws-yes" type="radio" name="Straws" value="1"><label for="radio-straws-yes" style="margin-left: 10px; margin-bottom: 15px;">The Venue used Plastic straws</label>
                     <p>
                         <a class="btn btn-secondary" href="/" style="background-color: #656565">Cancel</a>
                         <button class="btn btn-primary" type="submit" id="btn-submit" style="background-color: #5E9950; border-color: #5E8850">Submit Report</button>
@@ -88,11 +83,11 @@
                     var formattedData = [];
                     for(var i = 0; i < data.length; i++) {
                         formattedData.push({
-                            'id': data[i].EntityID,
-                            'text': data[i].DisplayName + " (" + data[i].AddressLine + ")"
+                            'id': data[i].id,
+                            'text': data[i].name + " (" + data[i].vicinity + ")"
                         });
 
-                        currentResults[data[i].EntityID] = data[i];
+                        currentResults[data[i].id] = data[i];
                     }
                     
                     return {
@@ -116,13 +111,10 @@
             var selected = currentResults[$(this).val()];
 
             console.log(selected);
-            $('#hidden-bing-id').val(selected.EntityID);
-            $('#hidden-business-name').val(selected.DisplayName);
-            $('#hidden-address-line').val(selected.AddressLine);
-            $('#hidden-address-locality').val(selected.Locality);
-            $('#hidden-address-postcode').val(selected.PostalCode);
-            $('#hidden-address-latitude').val(selected.Latitude);
-            $('#hidden-address-longitude').val(selected.Longitude);
+            $('#hidden-bing-id').val(selected.id);
+            $('#hidden-business-name').val(selected.name);
+            $('#hidden-address-latitude').val(selected.geometry.location.lat);
+            $('#hidden-address-longitude').val(selected.geometry.location.lng);
         });
 
 
