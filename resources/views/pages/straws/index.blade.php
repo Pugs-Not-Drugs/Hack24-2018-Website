@@ -85,7 +85,9 @@
     <script type='text/javascript' src="/assets/js/turtleometer.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCadA9-6PJqd9mvG7xCdMssoxk2DG7gqrE&callback=initMap"></script>
     <script type='text/javascript'>
-        
+        var infowindow = null;
+
+
         function initMap() {
             var nottingham = {lat: 52.954783, lng: -1.158109};
             var map = new google.maps.Map(document.getElementById('turtleMap'), {
@@ -93,10 +95,14 @@
                 center: nottingham
             });
 
-            var markers = [
-                {id: 1, name: "Burger King", latitude: 52.854783, longitude: -1.158109, straws: 1},
-                {id: 2, name: "Five Guys", latitude: 52.754783, longitude: -1.158109, straws: 0},
-                {id: 3, name: "MOD Pizza", latitude: 52.354783, longitude: -1.158109, straws: 1},
+            infowindow = new google.maps.InfoWindow({
+                content: "holding..."
+            });
+
+            var markers= [
+                {id: 1, name: "Burger King", latitude: 52.854783, longitude: -1.158109, happyStraws: 1, sadStraws: 4},
+                {id: 2, name: "Five Guys", latitude: 52.754783, longitude: -1.158109, happyStraws: 9, sadStraws: 4},
+                {id: 3, name: "MOD Pizza", latitude: 52.354783, longitude: -1.158109, happyStraws: 1, sadStraws: 4},
             ];
 
             var bounds = new google.maps.LatLngBounds();
@@ -110,13 +116,16 @@
                 var marker = new google.maps.Marker({
                     position: {lat: markers[i].latitude, lng: markers[i].longitude},
                     map: map,
-                    icon: markers[i].straws ? "/images/sad-turtle.png" : "/images/happy-turtle.png",
-                    title: markers[i].name
+                    icon: markers[i].happyStraws < markers[i].sadStraws ? "/images/sad-turtle.png" : "/images/happy-turtle.png",
+                    title: markers[i].name,
+                    html: getInfoWindow(markers[i].name, markers[i].happyStraws, markers[i].sadStraws)
                 });
 
-                // marker.addListener('click', function() {
-                //     infowindow.open(map, marker);
-                // });
+                google.maps.event.addListener(marker, 'click', function () {
+                    // where I have added .html to the marker object.
+                    infowindow.setContent(this.html);
+                    infowindow.open(map, this);
+                });
 
                 bounds.extend(marker.getPosition());
             }
@@ -132,6 +141,10 @@
 
             map.fitBounds(bounds)
 
+        }
+
+        function getInfoWindow(name, happyStraws, sadStraws) {
+            return "<h1>" + name + "</h1><p>" + (happyStraws > sadStraws ? "This place loves turtles!" : "This place doesn't care about turtles!") + "</p><p>They have a " + parseInt(( 100 / (happyStraws + sadStraws) ) * happyStraws) + "% happy turtle rating!</p>";
         }
 
         

@@ -41,9 +41,8 @@
                 <div class="col-sm-7">
                     <div class="header-left">
                         <img src="/images/EcoNotts_Logo.png" style="max-height: 100px;">
-
+                        <a href="/" style="margin-right: 20px;">Home</a>
                         <a href="/straws" style="margin-right: 20px;">Straws</a>
-                        <a href="/air-pollution">Air Pollution</a>
                     </div>
                 </div>
 

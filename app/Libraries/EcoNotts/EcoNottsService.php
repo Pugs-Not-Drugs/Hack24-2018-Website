@@ -12,7 +12,7 @@ class EcoNottsService
 
     public function __construct(Client $guzzle)
     {
-        $this->endpoint = 'https://a8000c76.ngrok.io/api/';
+        $this->endpoint = "https://econotts-api.azurewebsites.net/api/";
         $this->guzzle = $guzzle;
     }
 
@@ -20,25 +20,29 @@ class EcoNottsService
     {
         
         \Log::info('Submitting: ' . print_r($params, true));
-        $path = "Establishment/add";
+        $path = "establishment/add";
 
         try {
            
             $data = [
-                'body' => json_encode($params),
+                'form_params' => $params,
                 'headers' => [],
             ];
-            \Log::info($this->endpoint . $path);
+            
+            $url = $this->endpoint . $path;
+            
+            \Log::info(print_r($url, true));
+            \Log::info(print_r($data, true));
+
             $response = $this->guzzle->post(
-                $this->endpoint . $path,
+                $url,
                 $data
             );
-
+            
             $contentType = $response->getHeader('Content-Type');
 
             // get the body of the response
-            $body = json_decode($response->getBody());
-            dd($body);
+            
             // Ensure we successfully decoded the response
             if (json_last_error() !== JSON_ERROR_NONE) {
                 throw new \App\Exceptions\RequestException("Failed to decode JSON response: " . json_last_error());
@@ -50,7 +54,7 @@ class EcoNottsService
             // we have had a bad response
             $response = $e->getResponse();
             $body = json_decode($response->getBody()->getContents());
-            dd($response, $body);
+            // dd($response, $body);
             // $body = json_decode($response->getBody()->getContents());
             
             return true;

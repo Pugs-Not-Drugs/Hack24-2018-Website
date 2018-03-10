@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Libraries\Pollution\PollutionService;
 
 use App\Http\Requests;
 
@@ -14,11 +15,15 @@ class DashboardController extends Controller
         $this->request = $request;
     }
 
-    public function index() {
+    public function index(PollutionService $pollutionService, \App\Libraries\Foodbank\FoodBankRepository $foodBankRepository) {
         
         $success_message = $this->request->session()->get('success_message');
+        $pollutionData = $pollutionService->get();
 
-        return view('pages.dashboard.index', ['success_message' => $success_message, 'strawPercentage' => rand(0, 100)]);
+        
+        
+
+        return view('pages.dashboard.index', ['success_message' => $success_message, 'strawPercentage' => rand(0, 100), 'pollutionData' => $pollutionData]);
 
 
     }
