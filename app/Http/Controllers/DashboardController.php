@@ -20,10 +20,18 @@ class DashboardController extends Controller
         $success_message = $this->request->session()->get('success_message');
         $pollutionData = $pollutionService->get();
 
-        
+        $foodbankNeeds = $foodBankRepository->neededItems();
         
 
-        return view('pages.dashboard.index', ['success_message' => $success_message, 'strawPercentage' => rand(0, 100), 'pollutionData' => $pollutionData]);
+        return view(
+            'pages.dashboard.index', 
+            [
+                'success_message' => $success_message, 
+                'strawPercentage' => rand(0, 100), 
+                'pollutionData' => $pollutionData,
+                'foodbankNeeds' => $foodbankNeeds
+            ]
+        );
 
 
     }

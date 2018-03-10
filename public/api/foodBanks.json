@@ -19,7 +19,8 @@
             "Pasta",
             "Cereal",
             "Biscuits"
-        ]
+        ] ,
+		"lat_long": "52.9341373,-1.2176444,17"
     },
     {
         "name": "Arnold Foodbank",
@@ -59,7 +60,8 @@
         ],
         "items_plenty": [
             "Beans"
-        ]
+        ],
+		"lat_long": "52.9958099,-1.1398624,17"
     },
     {
         "name": "Clifton Foodbank",
@@ -86,10 +88,11 @@
             "Beans",
             "Sugar",
             "Pasta"
-        ]
+        ],
+		"lat_long": "52.9110859,-1.1723989,17"
     },
     {
-        "name": "Bestwood & Bulwell Foodbank",
+         "name": "Bestwood & Bulwell Foodbank",
         "address": [
             "St Philip's Church",
             "Knights Close, off Old Farm Road",
@@ -113,10 +116,11 @@
             "Beans",
             "Breakfast Cereal",
             "Pasta"
-        ]
+        ],
+		"lat_long": "53.0049679,-1.1718383,17"
     },
     {
-        "name": "Long Eaton & Sawley Foodbank",
+         "name": "Long Eaton & Sawley Foodbank",
         "address": [
             "Christ Church Methodist Church",
             "1 College Street ",
@@ -153,10 +157,11 @@
             "Biscuits",
             "Dried Pasta",
             "Tinned Spaghetti"
-        ]
+        ],
+		"lat_long": "52.9020526,-1.2840793,17"
     },
     {
-        "name": "Coalville Foodbank",
+          "name": "Coalville Foodbank",
         "address": [
             "New Life Church",
             "Margaret Street",
@@ -181,17 +186,18 @@
             "Tea Bags",
             "Soup",
             "Cereal"
-        ]
+        ],
+		"lat_long": "52.7242746,-1.3780677,17"
     },
     {
-        "name": "Ashby Foodbank",
+         "name": "Ashby Foodbank",
         "address": [
             "1 Trinity Close",
             "Ashby de la Zouch",
             "Leicestershire",
             "LE65 2GQ"
         ],
- 		"food_dropoff": [
+        "food_dropoff": [
             "Tesco Resolution Road Ashby-de-la-Zouch, Mon to Sat 24h, Sun 1000 - 1600"
         ],
         "items_needed": [
@@ -204,16 +210,17 @@
         "items_plenty": [
             "Beans",
             "Sugar"
-        ]
+        ],
+		"lat_long": "52.7458055,-1.4787489"
     },
     {
-        "name": "Rutland Foodbank",
+         "name": "Rutland Foodbank",
         "address": [
             "Rear of 40 Melton Road",
             "Oakham",
             "LE15 6AY"
         ],
- 		"food_dropoff": [
+        "food_dropoff": [
             "All Saints Church Church Street , 0900 - 1730",
             "Coop Burley Road, Mon to Fri 0730 - 2100, Sat 0730 - 2000, Sun 1000 - 1600",
             "Coop Braunstone Road, 0700 - 2200",
@@ -243,6 +250,7 @@
             "Fizzy Drinks & Cordials",
             "Most Tinned Goods",
             "Shower Gel & Soap"
-        ]
+        ],
+		"lat_long": "52.6706591,-0.7361031,16.94"
     }
 ]

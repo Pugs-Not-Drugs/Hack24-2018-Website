@@ -81,6 +81,18 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="social-box recycle">
                         <i class="fa fa-recycle"></i>
+                        <p>Most Needed Items in Nottingham</p>
+                        <p>
+                            <ul>
+                                <?php $num = 0; ?>
+                                @foreach($foodbankNeeds as $foodbankNeed => $number)
+                                <?php if($num < 10) { ?>
+                                    <li>{{ $foodbankNeed }}</li>
+                                    <?php $num += 1; ?>
+                                <?php } ?>
+                                @endforeach
+                            </ul>
+                        </p>
                     </div>
                     <!--/social-box-->
                 </div><!--/.col-->
