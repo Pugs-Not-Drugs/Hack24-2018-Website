@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'DashboardController@index');
+
+Route::get('/straws', 'StrawsController@index');
+Route::match(['get', 'post'], '/straws/report', 'StrawsController@report');
+
+Route::get('/ajax/straws/search', 'StrawsController@searchCompanies');
