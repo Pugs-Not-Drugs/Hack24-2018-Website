@@ -41,6 +41,18 @@
         .social-box {
             min-height: 550px;
         }
+
+        .social-box.straws i {
+            background: indianred;
+        }
+
+        .social-box.pollution i {
+            background: green;
+        }
+
+        .social-box.foodbank i {
+            background: orange;
+        }
     </style>
 </head>
 <body>

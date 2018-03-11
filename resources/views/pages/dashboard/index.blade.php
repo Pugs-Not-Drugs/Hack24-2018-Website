@@ -93,7 +93,7 @@
                 <!-- Twitter Feed -->
                 <div class="col-lg-6 col-md-6">
                     <div class="social-box pollution" style="padding-bottom: 20px;">
-                        <i class="fa fa-ambulance"></i>
+                        <i class="fa fa-recycle"></i>
                         <h2>Nottingham Centre Real-time Air Quality</h2>
                         <div style="height: 120px; width: 40%; margin-left: auto; margin-right: auto; background-color: {{ $pollutionData->aqi < 51 ? 'green' : 'yellow' }};margin-top: 50px; padding-top: 50px;">
                             <p style="color: {{ $pollutionData->aqi < 51 ? 'white' : 'black' }}; font-size: 80px;">{{ $pollutionData->aqi }}</p>
@@ -114,7 +114,7 @@
                 
                 <!-- Twitter Feed -->
                 <div class="col-lg-6 col-md-6">
-                    <div class="social-box recycle">
+                    <div class="social-box foodbank">
                         <i class="fa fa-recycle"></i>
                         <h2>Foodbank - Most Needed Items</h2>
                         <?php $num = 1; ?>

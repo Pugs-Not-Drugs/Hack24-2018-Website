@@ -66,3 +66,7 @@
 </div>
 
 @endsection
+
+@section('js_content')
+    
+@endsection

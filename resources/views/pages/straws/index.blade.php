@@ -56,7 +56,7 @@
         
         <!-- Twitter Feed -->
         <div class="col-lg-6 col-md-6">
-            <div class="social-box pollution">
+            <div class="social-box straws">
                 <i class="fa fa-anchor"></i>
                 <h2>Turtleometer</h2>              
                 <div id="div-turtleometer"></div>
@@ -70,8 +70,8 @@
         
         <!-- Twitter Feed -->
         <div class="col-lg-6 col-md-6">
-            <div class="social-box recycle">
-                <i class="fa fa-recycle"></i>
+            <div class="social-box straws">
+                <i class="fa fa-anchor"></i>
                 <h2>Turtle's Best Friends</h2>
                 <?php $num = 1; ?>
                 <p>

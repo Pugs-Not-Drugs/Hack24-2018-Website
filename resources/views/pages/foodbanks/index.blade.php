@@ -43,8 +43,8 @@
             
         <!-- Twitter Feed -->
         <div class="col-lg-12 col-md-12">
-            <div class="social-box straws">
-                <i class="fa fa-anchor"></i>
+            <div class="social-box foodbank">
+                <i class="fa fa-recycle"></i>
                 <h2>Local Foodbanks</h2>
                 <div id='bankMap'></div>
             </div>
@@ -58,8 +58,8 @@
         </style>
         <!-- Twitter Feed -->
         <div class="col-lg-12 col-md-12">
-            <div class="social-box pollution">
-                <i class="fa fa-anchor"></i>
+            <div class="social-box foodbank">
+                <i class="fa fa-recycle"></i>
                 <h2>Foodbank Needs</h2>         
                 <table class="table table-striped" style="width: 80%; margin-left: auto; margin-right: auto; margin-bottom: 30px;">
                     <thead>
