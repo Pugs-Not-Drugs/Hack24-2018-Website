@@ -65,7 +65,7 @@
                 <!-- Twitter Feed -->
                 <div class="col-lg-6 col-md-6">
                     <div class="social-box report-straws">
-                        <i style="background-image: url('/images/straws.png'); min-height: 110px;background-repeat: no-repeat;background-position: 50% 53%;"></i>
+                        <i style="background-image: url('/images/straws_white.png'); min-height: 110px;background-repeat: no-repeat;background-position: 50% 53%;"></i>
                         <h2>Report a Venue</h2>
                         <div style="margin-bottom: 30px; min-height:350px; padding: 30px;">
                             <form method="POST" action='/straws/report' style="margin-bottom: 30px;">
