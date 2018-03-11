@@ -47,7 +47,7 @@
                 <!-- Twitter Feed -->
                 <div class="col-lg-6 col-md-6">
                     <div class="social-box straws">
-                        <i class="fa fa-anchor"></i>
+                        <i class="fa fa-glass"></i>
                         <h2>Turtleometer</h2>
                         <div id="div-turtleometer"></div>
                         {{--  <p><a href="straws/report" class='btn btn-primary' style="color: white !important; margin-top: 10px; font-size: 12px; background-color: #5E9950; border-color: #5E8850; margin-bottom: 30px;">Click here to report a straw</a></p>  --}}
@@ -60,7 +60,7 @@
                 <!-- Twitter Feed -->
                 <div class="col-lg-6 col-md-6">
                     <div class="social-box straws" >
-                        <i class="fa fa-anchor"></i>
+                        <i class="fa fa-glass"></i>
                         <h2>Report a Venue</h2>
                         <div style="margin-bottom: 30px; min-height:350px; padding: 30px;">
                             <form method="POST" action='/straws/report' style="margin-bottom: 30px;">

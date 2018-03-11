@@ -44,7 +44,7 @@
         <!-- Twitter Feed -->
         <div class="col-lg-12 col-md-12">
             <div class="social-box straws">
-                <i class="fa fa-anchor"></i>
+                <i class="fa fa-glass"></i>
                 <h2>Turtle Happiness Visualiser</h2>
                 <div id='turtleMap'></div>
             </div>
@@ -57,7 +57,7 @@
         <!-- Twitter Feed -->
         <div class="col-lg-6 col-md-6">
             <div class="social-box straws">
-                <i class="fa fa-anchor"></i>
+                <i class="fa fa-glass"></i>
                 <h2>Turtleometer</h2>              
                 <div id="div-turtleometer"></div>
                 {{--  <p><a class="btn btn-primary" href="straws/report" style="color: white !important; margin-top: 10px; font-size: 12px; background-color: #5E9950; border-color: #5E8850; margin-bottom: 30px;">Click here to report a straw</a></p>  --}}
@@ -71,7 +71,7 @@
         <!-- Twitter Feed -->
         <div class="col-lg-6 col-md-6">
             <div class="social-box straws">
-                <i class="fa fa-anchor"></i>
+                <i class="fa fa-glass"></i>
                 <h2>Turtle's Best Friends</h2>
                 <?php $num = 1; ?>
                 <p>

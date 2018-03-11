@@ -43,7 +43,7 @@
         }
 
         .social-box.straws i {
-            background: indianred;
+            background: indianred; 
         }
 
         .social-box.pollution i {
