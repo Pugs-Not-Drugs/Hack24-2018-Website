@@ -18,18 +18,32 @@ class EcoNottsService
     }
 
     public function percentage() {
-        return rand(0, 100);
+        $percentage = file_get_contents($this->endpoint . 'Percentage');
+        $percentage = json_decode($percentage);
+    
+        if(!empty($percentage) && !empty($percentage->percentage && $percentage->percentage != "NaN")) {
+            return number_format($percentage->percentage, 2);
+        } else {
+            return 0;
+        }
     }
 
     public function friends() {
-        return [
-            (object)["id" => 1, "name" => "Burger King", "latitude" => 52.854783, "longitude" => -1.158109, "happyStraws" => 1, "sadStraws" => 4],
-            (object)["id" => 2, "name" => "Five Guys", "latitude" => 52.754783, "longitude" => -1.158109, "happyStraws" => 9, "sadStraws" => 4],
-            (object)["id" => 3, "name" => "MOD Pizza", "latitude" => 52.354783, "longitude" => -1.158109, "happyStraws" => 1, "sadStraws" => 4],
-        ];
+        
+        $friends = file_get_contents($this->endpoint . 'establishment/top');
+        $friends = json_decode($friends);
+
+        return $friends;
+
     }
 
     public function allWithRatings() {
+
+        $all = file_get_contents($this->endpoint . 'establishment/all');
+        $all = json_decode($all);
+        
+        return $all;
+
         return [
             (object)["id" => 1, "name" => "Burger King", "latitude" => 52.854783, "longitude" => -1.158109, "happyStraws" => 1, "sadStraws" => 4],
             (object)["id" => 2, "name" => "Five Guys", "latitude" => 52.754783, "longitude" => -1.158109, "happyStraws" => 9, "sadStraws" => 4],
