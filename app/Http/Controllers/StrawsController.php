@@ -17,11 +17,11 @@ class StrawsController extends Controller
         $this->request = $request;
     }
 
-    public function index()
+    public function index(EcoNottsService $ecoNottsService)
     {
         $success_message = $this->request->session()->get('success_message');
 
-        return view('pages.straws.index', ['success_message' => $success_message, 'strawPercentage' => rand(0, 100)]);
+        return view('pages.straws.index', ['success_message' => $success_message, 'strawPercentage' => $ecoNottsService->percentage(), 'turtleMarkers' => $ecoNottsService->allWithRatings(), 'turtleFriends' => $ecoNottsService->friends()]);
     }
 
     public function report(EcoNottsService $ecoNottsService) 

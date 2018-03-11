@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Libraries\Pollution\PollutionService;
+use App\Libraries\EcoNotts\EcoNottsService;
 
 use App\Http\Requests;
 
@@ -15,7 +16,7 @@ class DashboardController extends Controller
         $this->request = $request;
     }
 
-    public function index(PollutionService $pollutionService, \App\Libraries\Foodbank\FoodBankRepository $foodBankRepository) {
+    public function index(PollutionService $pollutionService, \App\Libraries\Foodbank\FoodBankRepository $foodBankRepository, EcoNottsService $ecoNottsService) {
         
         $success_message = $this->request->session()->get('success_message');
         $pollutionData = $pollutionService->get();
@@ -27,7 +28,7 @@ class DashboardController extends Controller
             'pages.dashboard.index', 
             [
                 'success_message' => $success_message, 
-                'strawPercentage' => rand(0, 100), 
+                'strawPercentage' => $ecoNottsService->percentage(), 
                 'pollutionData' => $pollutionData,
                 'foodbankNeeds' => $foodbankNeeds
             ]

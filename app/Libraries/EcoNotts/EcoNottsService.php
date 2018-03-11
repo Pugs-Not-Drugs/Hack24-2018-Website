@@ -17,6 +17,26 @@ class EcoNottsService
         $this->guzzle = $guzzle;
     }
 
+    public function percentage() {
+        return rand(0, 100);
+    }
+
+    public function friends() {
+        return [
+            (object)["id" => 1, "name" => "Burger King", "latitude" => 52.854783, "longitude" => -1.158109, "happyStraws" => 1, "sadStraws" => 4],
+            (object)["id" => 2, "name" => "Five Guys", "latitude" => 52.754783, "longitude" => -1.158109, "happyStraws" => 9, "sadStraws" => 4],
+            (object)["id" => 3, "name" => "MOD Pizza", "latitude" => 52.354783, "longitude" => -1.158109, "happyStraws" => 1, "sadStraws" => 4],
+        ];
+    }
+
+    public function allWithRatings() {
+        return [
+            (object)["id" => 1, "name" => "Burger King", "latitude" => 52.854783, "longitude" => -1.158109, "happyStraws" => 1, "sadStraws" => 4],
+            (object)["id" => 2, "name" => "Five Guys", "latitude" => 52.754783, "longitude" => -1.158109, "happyStraws" => 9, "sadStraws" => 4],
+            (object)["id" => 3, "name" => "MOD Pizza", "latitude" => 52.354783, "longitude" => -1.158109, "happyStraws" => 1, "sadStraws" => 4],
+        ];
+    }
+
     public function sendReport($params)
     {
         

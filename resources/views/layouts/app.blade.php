@@ -24,10 +24,24 @@
     <link rel="stylesheet" href="/assets/css/c3.min.css">
     <link href="/assets/css/lib/vector-map/jqvmap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css">
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <style>
+        .social-box h2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 40px;
+            text-align: left;
+            font-size: 1.7rem;
+        }
 
+        .social-box {
+            min-height: 550px;
+        }
+    </style>
 </head>
 <body>
 
@@ -130,7 +144,55 @@
             } );
         } )( jQuery );
     </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>
+    <script>
+        var currentResults = [];
+        $('#select-venue').select2({
+            ajax: {
+                url: '/ajax/companies/search',
+                dataType: 'json',
+                processResults: function (data, params) {
+                    currentResults = [];
+                    var formattedData = [];
+                    for(var i = 0; i < data.length; i++) {
+                        formattedData.push({
+                            'id': data[i].id,
+                            'text': data[i].name + " (" + data[i].vicinity + ")"
+                        });
 
+                        currentResults[data[i].id] = data[i];
+                    }
+                    
+                    return {
+                        results: formattedData
+                    };
+                },
+            },
+            placeholder: 'Search for a venue',
+            minimumInputLength: 3 
+        });
+
+        $('#btn-submit').on('click', function(event) {
+            if($('#select-venue').val() == "" || $('#select-venue').val() == null) {
+                alert("Please select a Venue");
+                event.preventDefault();
+                return false;
+            }
+        });
+
+        $('#select-venue').on('change', function() {
+            var selected = currentResults[$(this).val()];
+
+            console.log(selected);
+            $('#hidden-bing-id').val(selected.id);
+            $('#hidden-business-name').val(selected.name);
+            $('#hidden-address-latitude').val(selected.geometry.location.lat);
+            $('#hidden-address-longitude').val(selected.geometry.location.lng);
+        });
+
+
+    </script>
     @yield('js_content')
 
 

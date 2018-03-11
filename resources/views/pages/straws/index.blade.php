@@ -45,7 +45,7 @@
         <div class="col-lg-12 col-md-12">
             <div class="social-box straws">
                 <i class="fa fa-anchor"></i>
-
+                <h2>Turtle Happiness Visualiser</h2>
                 <div id='turtleMap'></div>
             </div>
             <!--/social-box-->
@@ -57,9 +57,10 @@
         <!-- Twitter Feed -->
         <div class="col-lg-6 col-md-6">
             <div class="social-box pollution">
-                <i class="fa fa-anchor"></i>                    
+                <i class="fa fa-anchor"></i>
+                <h2>Turtleometer</h2>              
                 <div id="div-turtleometer"></div>
-                <p><a class="btn btn-primary" href="straws/report" style="color: white !important; margin-top: 10px; font-size: 12px; background-color: #5E9950; border-color: #5E8850; margin-bottom: 30px;">Click here to report a straw</a></p>
+                {{--  <p><a class="btn btn-primary" href="straws/report" style="color: white !important; margin-top: 10px; font-size: 12px; background-color: #5E9950; border-color: #5E8850; margin-bottom: 30px;">Click here to report a straw</a></p>  --}}
             </div>
             <!--/social-box-->
         </div><!--/.col-->
@@ -71,6 +72,14 @@
         <div class="col-lg-6 col-md-6">
             <div class="social-box recycle">
                 <i class="fa fa-recycle"></i>
+                <h2>Turtle's Best Friends</h2>
+                <?php $num = 1; ?>
+                <p>
+                    @foreach($turtleFriends as $turtleFriend)
+                        <b>#{{ $num }}: </b>{{ $turtleFriend->name }}<br>
+                        <?php $num += 1; ?>
+                    @endforeach
+                </p>
             </div>
             <!--/social-box-->
         </div><!--/.col-->
@@ -99,11 +108,9 @@
                 content: "holding..."
             });
 
-            var markers= [
-                {id: 1, name: "Burger King", latitude: 52.854783, longitude: -1.158109, happyStraws: 1, sadStraws: 4},
-                {id: 2, name: "Five Guys", latitude: 52.754783, longitude: -1.158109, happyStraws: 9, sadStraws: 4},
-                {id: 3, name: "MOD Pizza", latitude: 52.354783, longitude: -1.158109, happyStraws: 1, sadStraws: 4},
-            ];
+            // var markers= 
+
+            var markers = {!! json_encode($turtleMarkers) !!};;
 
             var bounds = new google.maps.LatLngBounds();
             for (var i = 0; i < markers.length; i++) {
