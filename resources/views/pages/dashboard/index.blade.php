@@ -121,8 +121,8 @@
                         <h2>Foodbank - Most Needed Items</h2>
                         <?php $num = 1; ?>
                         <p>
-                            @foreach(array_slice($foodbankNeeds, 0, 10) as $foodbankNeed => $number)
-                                <b>#{{ $num }}: </b>{{ $foodbankNeed }}<br>
+                            @foreach(array_slice($foodbankNeeds, 0, 5) as $foodbankNeed => $number)
+                                <a href="/food-banks"><b>#{{ $num }}: <img src="/images/icons/{{ str_replace('/', '_', str_replace(' ', '', strtolower($foodbankNeed))) }}.png" style='max-width: 40px; margin-bottom: 15px; margin-top: 15px;'></a><br>
                                 <?php $num += 1; ?>
                             @endforeach
                         </p>
