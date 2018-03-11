@@ -43,15 +43,20 @@
         }
 
         .social-box.straws i {
-            background: indianred; 
+            background: #74A297; 
+        }
+
+        .social-box.report-straws i {
+            background: #1F3654;
+            color: white;
         }
 
         .social-box.pollution i {
-            background: green;
+            background: #F8F5D6;
         }
 
         .social-box.foodbank i {
-            background: orange;
+            background: #E4CA9B;
         }
     </style>
 </head>

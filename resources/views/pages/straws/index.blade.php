@@ -56,7 +56,7 @@
         
         <!-- Twitter Feed -->
         <div class="col-lg-6 col-md-6">
-            <div class="social-box straws">
+            <div class="social-box report-straws">
                 <i class="fa fa-glass"></i>
                 <h2>Turtleometer</h2>              
                 <div id="div-turtleometer"></div>

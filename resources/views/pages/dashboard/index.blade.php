@@ -61,7 +61,7 @@
                 
                 <!-- Twitter Feed -->
                 <div class="col-lg-6 col-md-6">
-                    <div class="social-box straws" >
+                    <div class="social-box report-straws">
                         <i class="fa fa-glass"></i>
                         <h2>Report a Venue</h2>
                         <div style="margin-bottom: 30px; min-height:350px; padding: 30px;">

@@ -78,14 +78,14 @@
                                 {{--  <td>{{ var_dump($foodbank->items_needed) }}</td>  --}}
                                 <td class="td-foodbank-icons">
                                     @foreach($foodbank->items_needed as $item_needed)
-                                        <img src="/images/icons/{{ str_replace('/', '_', str_replace(' ', '', strtolower($item_needed))) }}.png" style='max-width: 40px;'> {{ $item_needed }}<br>
+                                        <span style="margin-bottom: 10px"><img src="/images/icons/{{ str_replace('/', '_', str_replace(' ', '', strtolower($item_needed))) }}.png" style='max-width: 40px; margin-bottom: 10px;'> {{ $item_needed }}</span><br>
                                     @endforeach                                 
                                 </td>
                                 <td>
                                     @if(!empty($foodbank->food_dropoff))
                                         @if(is_array($foodbank->food_dropoff))
                                             @foreach($foodbank->food_dropoff as $dropoff_point)
-                                                {{ $dropoff_point }}<br>
+                                                <span style="padding: 10px; margin-bottom: 10px;">{{ $dropoff_point }}</span><br><br>
                                             @endforeach
                                         @else
                                             {{ $foodbank->food_dropoff }}
