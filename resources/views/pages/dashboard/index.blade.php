@@ -47,7 +47,7 @@
                 <!-- Twitter Feed -->
                 <div class="col-lg-6 col-md-6">
                     <div class="social-box straws">
-                        <i class="fa fa-glass"></i>
+                        <i style="background-image: url('/images/turtle.png'); min-height: 110px;background-repeat: no-repeat;background-position: 50% 53%;"></i>
                         <h2>Turtleometer</h2>
                         <a href="/straws">
                         <div id="div-turtleometer"></div>
@@ -62,7 +62,7 @@
                 <!-- Twitter Feed -->
                 <div class="col-lg-6 col-md-6">
                     <div class="social-box report-straws">
-                        <i class="fa fa-glass"></i>
+                        <i style="background-image: url('/images/straws.png'); min-height: 110px;background-repeat: no-repeat;background-position: 50% 53%;"></i>
                         <h2>Report a Venue</h2>
                         <div style="margin-bottom: 30px; min-height:350px; padding: 30px;">
                             <form method="POST" action='/straws/report' style="margin-bottom: 30px;">
@@ -95,7 +95,7 @@
                 <!-- Twitter Feed -->
                 <div class="col-lg-6 col-md-6">
                     <div class="social-box pollution" style="padding-bottom: 20px;">
-                        <i class="fa fa-recycle"></i>
+                        <i style="background-image: url('/images/pollution.png'); min-height: 110px;background-repeat: no-repeat;background-position: 50% 50%;"></i>
                         <h2>Nottingham Centre Real-time Air Quality</h2>
                         <div style="height: 120px; width: 40%; margin-left: auto; margin-right: auto; background-color: {{ $pollutionData->aqi < 51 ? 'green' : 'yellow' }};margin-top: 50px; padding-top: 50px;">
                             <p style="color: {{ $pollutionData->aqi < 51 ? 'white' : 'black' }}; font-size: 80px;">{{ $pollutionData->aqi }}</p>
@@ -117,7 +117,7 @@
                 <!-- Twitter Feed -->
                 <div class="col-lg-6 col-md-6">
                     <div class="social-box foodbank">
-                        <i class="fa fa-recycle"></i>
+                        <i style="background-image: url('/images/food_bank.png'); min-height: 110px;background-repeat: no-repeat;background-position: 50% 50%;"></i>
                         <h2>Foodbank - Most Needed Items</h2>
                         <?php $num = 1; ?>
                         <p>

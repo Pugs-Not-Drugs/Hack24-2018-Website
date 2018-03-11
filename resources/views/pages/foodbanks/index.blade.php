@@ -44,7 +44,7 @@
         <!-- Twitter Feed -->
         <div class="col-lg-12 col-md-12">
             <div class="social-box foodbank">
-                <i class="fa fa-recycle"></i>
+                <i style="background-image: url('/images/food_bank.png'); min-height: 110px;background-repeat: no-repeat;background-position: 50% 50%;"></i>
                 <h2>Local Foodbanks</h2>
                 <div id='bankMap'></div>
             </div>
@@ -59,7 +59,7 @@
         <!-- Twitter Feed -->
         <div class="col-lg-12 col-md-12">
             <div class="social-box foodbank">
-                <i class="fa fa-recycle"></i>
+                <i style="background-image: url('/images/food_bank.png'); min-height: 110px;background-repeat: no-repeat;background-position: 50% 50%;"></i>
                 <h2>Foodbank Needs</h2>         
                 <table class="table table-striped" style="width: 80%; margin-left: auto; margin-right: auto; margin-bottom: 30px;">
                     <thead>
