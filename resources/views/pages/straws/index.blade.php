@@ -121,7 +121,7 @@
                 });
 
                 var marker = new google.maps.Marker({
-                    position: {lat: markers[i].latitude, lng: markers[i].longitude},
+                    position: {lat: parseFloat(markers[i].latitude), lng: parseFloat(markers[i].longitude)},
                     map: map,
                     icon: markers[i].happyStraws < markers[i].sadStraws ? "/images/sad-turtle.png" : "/images/happy-turtle.png",
                     title: markers[i].name,
