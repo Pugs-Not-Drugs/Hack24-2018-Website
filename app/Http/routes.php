@@ -18,4 +18,6 @@ Route::match(['get', 'post'], '/straws/report', 'StrawsController@report');
 
 Route::get('/food-banks', 'FoodBankController@index');
 
+Route::get('/recycling', 'RecyclingController@index');
+
 Route::get('/ajax/companies/search', 'StrawsController@searchCompanies');

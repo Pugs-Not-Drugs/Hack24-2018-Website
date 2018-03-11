@@ -37,6 +37,7 @@
                 <div class="social-box twitter" style="min-height: 800px;">
                     <i class="fa fa-twitter"></i>
                     <h2>Twitter Feed</h2>
+                    <a class="twitter-timeline" href="https://twitter.com/eco_notts?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <!--/social-box-->
             </div><!--/.col-->
@@ -50,7 +51,7 @@
                         <i style="background-image: url('/images/turtle.png'); min-height: 110px;background-repeat: no-repeat;background-position: 50% 53%;"></i>
                         <h2>Turtleometer</h2>
                         <a href="/straws">
-                        <div id="div-turtleometer"></div>
+                            <div id="div-turtleometer"></div>
                         </a>
                         {{--  <p><a href="straws/report" class='btn btn-primary' style="color: white !important; margin-top: 10px; font-size: 12px; background-color: #5E9950; border-color: #5E8850; margin-bottom: 30px;">Click here to report a straw</a></p>  --}}
                     </div>
@@ -143,4 +144,12 @@
 
 @section('js_content')
     <script type='text/javascript' src="/assets/js/turtleometer.js"></script>
+    <script>
+    twttr.widgets.createTimeline(
+  {
+    sourceType: "profile",
+    screenName: "TwitterDev"
+  },
+  document.getElementById("container")
+);</script>
 @endsection

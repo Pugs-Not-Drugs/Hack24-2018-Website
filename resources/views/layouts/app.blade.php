@@ -75,6 +75,7 @@
                         <a href="/" style="margin-right: 20px;">Home</a>
                         <a href="/straws" style="margin-right: 20px;">Straws</a>
                         <a href="/food-banks" style="margin-right: 20px;">Food Banks</a>
+                        <a href="/recycling" style="margin-right: 20px;">Recycling</a>
                     </div>
                 </div>
 

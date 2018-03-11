@@ -74,14 +74,14 @@ class EcoNottsService
                 $data
             );
             
-            $contentType = $response->getHeader('Content-Type');
+            // $contentType = $response->getHeader('Content-Type');
 
-            // get the body of the response
+            // // get the body of the response
             
-            // Ensure we successfully decoded the response
-            if (json_last_error() !== JSON_ERROR_NONE) {
-                throw new \App\Exceptions\RequestException("Failed to decode JSON response: " . json_last_error());
-            }
+            // // Ensure we successfully decoded the response
+            // if (json_last_error() !== JSON_ERROR_NONE) {
+            //     throw new \App\Exceptions\RequestException("Failed to decode JSON response: " . json_last_error());
+            // }
 
             return true;
 
