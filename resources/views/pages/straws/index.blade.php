@@ -76,7 +76,7 @@
                 <?php $num = 1; ?>
                 <p>
                     @foreach($turtleFriends as $turtleFriend)
-                        <b>#{{ $num }}: </b>{{ $turtleFriend->name }}<br>
+                <b>#{{ $num }}: </b>{{ $turtleFriend->name }}<br>
                         <?php $num += 1; ?>
                     @endforeach
                 </p>

@@ -49,7 +49,9 @@
                     <div class="social-box straws">
                         <i class="fa fa-glass"></i>
                         <h2>Turtleometer</h2>
+                        <a href="/straws">
                         <div id="div-turtleometer"></div>
+                        </a>
                         {{--  <p><a href="straws/report" class='btn btn-primary' style="color: white !important; margin-top: 10px; font-size: 12px; background-color: #5E9950; border-color: #5E8850; margin-bottom: 30px;">Click here to report a straw</a></p>  --}}
                     </div>
                     <!--/social-box-->
