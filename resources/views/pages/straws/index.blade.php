@@ -9,6 +9,21 @@
        }
     </style>
 
+    <html>
+    <style type="text/css">
+        .dragme {
+            position: relative;
+            width: 170px;
+            height: 103px;
+            cursor: move;
+        }
+
+        #draggable {
+            background-color: #ccc;
+            border: 1px solid #000;
+        }
+    </style>
+
     <div class="breadcrumbs">
         <div class="col-sm-4">
             <div class="page-header float-left">
@@ -85,6 +100,16 @@
             <!--/social-box-->
         </div><!--/.col-->
         <!-- End Twitter Feed -->
+
+        <div class="col-lg-12 col-md-12">
+            <div class="social-box" style="padding: 50px; height: auto !important; min-height: 100px;">
+                    <img src="/images/game/36770-200.png" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme bin">
+                    <img src="/images/game/16711-200.png" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme puddle">
+                    <img src="/images/game/119933-200.png" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme straw">
+                    <img src="/images/game/turtle bw.png" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme turtle">
+                    <img src="/images/game/iheartturtles.png" hidden alt="drag-and-drop image script" title="drag-and-drop image script" class="happy">
+            
+        </div>
    
     </div> <!-- .content -->
 
@@ -157,4 +182,89 @@
 
         
     </script>
+
+    <script>
+    function startDrag(e) {
+        // determine event object
+        if (!e) {
+            var e = window.event;
+        }
+        if (e.preventDefault) e.preventDefault();
+
+        // IE uses srcElement, others use target
+        targ = e.target ? e.target : e.srcElement;
+
+        if (targ.className.indexOf('dragme') === -1) { return };
+        // calculate event X, Y coordinates
+        offsetX = e.clientX;
+        offsetY = e.clientY;
+
+        // assign default values for top and left properties
+        if (!targ.style.left) { targ.style.left = '0px' };
+        if (!targ.style.top) { targ.style.top = '0px' };
+
+        // calculate integer values for top and left 
+        // properties
+        coordX = parseInt(targ.style.left);
+        coordY = parseInt(targ.style.top);
+        drag = true;
+
+        // move div element
+        document.onmousemove = dragDiv;
+        return false;
+
+    }
+    function dragDiv(e) {
+        if (!drag) { return };
+        if (!e) { var e = window.event };
+        // var targ=e.target?e.target:e.srcElement;
+        // move div element
+        targ.style.left = coordX + e.clientX - offsetX + 'px';
+        targ.style.top = coordY + e.clientY - offsetY + 'px';
+        return false;
+    }
+    function stopDrag(e) {
+        drag = false;
+        var straw = document.getElementsByClassName("straw")[0];
+        var bin = document.getElementsByClassName("bin")[0];
+        var turtle = document.getElementsByClassName("turtle")[0];
+        var puddle = document.getElementsByClassName("puddle")[0];
+        var strawX = parseInt(straw.style.left);
+        var strawY = parseInt(straw.style.top);
+        var binX = parseInt(bin.style.left);
+        var binY = parseInt(bin.style.top);
+
+        var turtleX = parseInt(turtle.style.left);
+        var turtleY = parseInt(turtle.style.top);
+        var puddleX = parseInt(puddle.style.left);
+        var puddleY = parseInt(puddle.style.top);
+
+        var distanceBetweenStrawAndBinX = strawX - binX;
+        var distanceBetweenStrawAndBinY = strawY - binY;
+        var distanceBetweenTurtleAndPuddleX = puddleX - turtleX;
+        var distanceBetweenTurtleAndPuddleY = puddleY - turtleY;
+
+        if ((distanceBetweenStrawAndBinX > -400 && distanceBetweenStrawAndBinX < -270)
+            && (distanceBetweenStrawAndBinY < 50 && distanceBetweenStrawAndBinY > -50)
+            && (distanceBetweenTurtleAndPuddleX < 400 && distanceBetweenTurtleAndPuddleX > 270)
+            && (distanceBetweenTurtleAndPuddleY > -35 && distanceBetweenTurtleAndPuddleY < 35)) {
+            console.log("ok");
+            var turtle = document.getElementsByClassName('turtle')[0];
+            var puddle = document.getElementsByClassName('puddle')[0];
+            var straw = document.getElementsByClassName('straw')[0];
+            var bin = document.getElementsByClassName('bin')[0];
+            var happyTurtle = document.getElementsByClassName('happy')[0];
+            happyTurtle.removeAttribute('hidden');
+            bin.setAttribute('hidden', true);
+            puddle.setAttribute('hidden', true);
+            turtle.setAttribute('hidden', true);
+            straw.setAttribute('hidden', true);
+        }
+    }
+
+    window.onload = function () {
+        document.onmousedown = startDrag;
+        document.onmouseup = stopDrag;
+    }
+</script>
 @endsection
