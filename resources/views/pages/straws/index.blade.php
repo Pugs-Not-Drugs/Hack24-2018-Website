@@ -102,11 +102,12 @@
         <!-- End Twitter Feed -->
 
         <div class="col-lg-12 col-md-12">
-            <div class="social-box" style="padding: 50px; height: auto !important; min-height: 100px;">
+            <div class="social-box" style="padding-top: 100px; min-height: 300px;">
                     <img src="/images/game/36770-200.png" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme bin">
-                    <img src="/images/game/16711-200.png" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme puddle">
                     <img src="/images/game/119933-200.png" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme straw">
                     <img src="/images/game/turtle bw.png" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme turtle">
+
+                    <img src="/images/game/16711-200.png" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme puddle">
                     <img src="/images/game/iheartturtles.png" hidden alt="drag-and-drop image script" title="drag-and-drop image script" class="happy">
             
         </div>
@@ -244,9 +245,26 @@
         var distanceBetweenTurtleAndPuddleX = puddleX - turtleX;
         var distanceBetweenTurtleAndPuddleY = puddleY - turtleY;
 
-        if ((distanceBetweenStrawAndBinX > -400 && distanceBetweenStrawAndBinX < -270)
+        console.log("Turtle");
+        console.log(turtleX);
+        console.log(turtleY);
+
+        console.log("Puddle");
+        console.log(puddleX);
+        console.log(puddleY);
+
+
+        console.log("Straw - Bin");
+        console.log(distanceBetweenStrawAndBinX);
+        console.log(distanceBetweenStrawAndBinY);
+
+        console.log("Turtle - Puddle");
+        console.log(distanceBetweenTurtleAndPuddleX);
+        console.log(distanceBetweenTurtleAndPuddleY);
+
+        if ((distanceBetweenStrawAndBinX > -200 && distanceBetweenStrawAndBinX < -50)
             && (distanceBetweenStrawAndBinY < 50 && distanceBetweenStrawAndBinY > -50)
-            && (distanceBetweenTurtleAndPuddleX < 400 && distanceBetweenTurtleAndPuddleX > 270)
+            && (distanceBetweenTurtleAndPuddleX < 120 && distanceBetweenTurtleAndPuddleX > -270)
             && (distanceBetweenTurtleAndPuddleY > -35 && distanceBetweenTurtleAndPuddleY < 35)) {
             console.log("ok");
             var turtle = document.getElementsByClassName('turtle')[0];
