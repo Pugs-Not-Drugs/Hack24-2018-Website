@@ -14,9 +14,21 @@ class RecyclingRepository
         // dd($this->recyclingCentres);
     }
 
-    public function all()
-    {
-        return $this->recyclingCentres;
+    public function all($type = null)
+    {   
+        if($type) {
+            $centres = [];
+
+            foreach ($this->recyclingCentres as $centre) {
+                if(isset($centre->{$type}) && $centre->{$type} == "Yes") {
+                    $centres[] = $centre;
+                }
+            }
+
+            return $centres;
+        } else {
+            return $this->recyclingCentres;
+        }
     }
 
     protected function generateObjects()

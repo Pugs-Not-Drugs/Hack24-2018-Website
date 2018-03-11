@@ -19,9 +19,8 @@ class RecyclingController extends Controller
         
         $success_message = $this->request->session()->get('success_message');
 
-        $centres = $recyclingRepository->all();
+        $centres = $recyclingRepository->all($this->request->input('type'));
         
-
         return view(
             'pages.recycling.index', 
             [

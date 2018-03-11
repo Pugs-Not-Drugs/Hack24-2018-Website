@@ -59,13 +59,82 @@
         <!-- Twitter Feed -->
         <div class="col-lg-12 col-md-12">
             <div class="social-box foodbank">
+                <style>
+                    .recycle-container {
+                        margin-bottom: 30px;
+                    }
+                    .recycle-option img {
+                        height: 40px;
+                    }
+                </style>
                 <i class="fa fa-recycle"></i>
-                <h2>What to recycle where</h2>         
-                <table class="table table-striped" style="width: 80%; margin-left: auto; margin-right: auto; margin-bottom: 30px;">
+                <h2>What to recycle where</h2>
+
+                <div class="col-1 recycle-option" id="recycling-options">
+                    <a href="/recycling"><img style="padding: 5px; max-width: 40px; margin-bottom: 10px;" src="/images/recycling/ALL.png" alt="ALL"></a><br>
+                    <span>ALL</span>
+                </div>
+            
+                <div class="col-1 recycle-option">
+                    <a href="/recycling?type=CLEAR_GLASS"><img style="padding: 5px; max-width: 40px; margin-bottom: 10px; {{ !empty($_GET['type']) && $_GET['type'] == 'CLEAR_GLASS' ? 'border: black 1px solid' : '' }}" src="/images/recycling/CLEAR_GLASS.png" alt="CLEAR_GLASS"></a><br>
+                    <span>CLEAR_GLASS</span>
+                </div>
+            
+                <div class="col-1 recycle-option">
+                    <a href="/recycling?type=GREEN_GLASS"><img style="padding: 5px; max-width: 40px; margin-bottom: 10px; {{ !empty($_GET['type']) && $_GET['type'] == 'GREEN_GLASS' ? 'border: black 1px solid' : '' }}" src="/images/recycling/GREEN_GLASS.png" alt="GREEN_GLASS"></a><br>
+                    <span>GREEN_GLASS</span>
+                </div>
+            
+                <div class="col-1 recycle-option">
+                    <a href="/recycling?type=BROWN_GLASS"><img style="padding: 5px; max-width: 40px; margin-bottom: 10px; {{ !empty($_GET['type']) && $_GET['type'] == 'BROWN_GLASS' ? 'border: black 1px solid' : '' }}" src="/images/recycling/BROWN_GLASS.png" alt="BROWN_GLASS"></a><br>
+                    <span>BROWN_GLASS</span>
+                </div>
+                <div class="col-1 recycle-option">
+                    <a href="/recycling?type=CANS_TINS"><img style="padding: 5px; max-width: 40px; margin-bottom: 10px; {{ !empty($_GET['type']) && $_GET['type'] == 'CANS_TINS' ? 'border: black 1px solid' : '' }}" src="/images/recycling/TINS_CANS.png" alt="CANS_TINS"></a><br>
+                    <span>CANS_TINS</span>
+                </div>
+            
+                <div class="col-1 recycle-option">
+                    <a href="/recycling?type=TEXTILES"><img style="padding: 5px; max-width: 40px; margin-bottom: 10px; {{ !empty($_GET['type']) && $_GET['type'] == 'TEXTILES' ? 'border: black 1px solid' : '' }}" src="/images/recycling/TEXTILES.png" alt="TEXTILES"></a><br>
+                    <span>TEXTILES</span>
+                </div>
+            
+                <div class="col-1 recycle-option">
+                    <a href="/recycling?type=OIL"><img style="padding: 5px; max-width: 40px; margin-bottom: 10px; {{ !empty($_GET['type']) && $_GET['type'] == 'OIL' ? 'border: black 1px solid' : '' }}" src="/images/recycling/OIL.png" alt="OIL"></a><br>
+                    <span>OIL</span>
+                </div>
+            
+                <div class="col-1 recycle-option">
+                    <a href="/recycling?type=PLASTIC"><img style="padding: 5px; max-width: 40px; margin-bottom: 10px; {{ !empty($_GET['type']) && $_GET['type'] == 'PLASTIC' ? 'border: black 1px solid' : '' }}" src="/images/recycling/PLASTIC.png" alt="PLASTIC"></a><br>
+                    <span>PLASTIC</span>
+                </div>
+            
+                <div class="col-1 recycle-option">
+                    <a href="/recycling?type=LITTER"><img style="padding: 5px; max-width: 40px; margin-bottom: 10px; {{ !empty($_GET['type']) && $_GET['type'] == 'LITTER' ? 'border: black 1px solid' : '' }}" src="/images/recycling/LITTER.png" alt="LITTER"></a><br>
+                    <span>LITTER</span>
+                </div>
+            
+                <div class="col-1 recycle-option">
+                    <a href="/recycling?type=CARTON_TETRAPAK"><img style="padding: 5px; max-width: 40px; margin-bottom: 10px; {{ !empty($_GET['type']) && $_GET['type'] == 'CARTON_TETRAPAK' ? 'border: black 1px solid' : '' }}" src="/images/recycling/CARTON_TETRAPAK.png" alt="CARTON_TETRAPAK"></a><br>
+                    <span>CARTON_TETRAPAK</span>
+                </div>
+                                
+                <div class="col-1 recycle-option">
+                    <a href="/recycling?type=PAPER"><img style="padding: 5px; max-width: 40px; margin-bottom: 10px; {{ !empty($_GET['type']) && $_GET['type'] == 'PAPER' ? 'border: black 1px solid' : '' }}" src="/images/recycling/PAPER.png" alt="PAPER"></a><br>
+                    <span>PAPER</span>
+                </div>
+            
+                <div class="col-1 recycle-option">
+                    <a href="/recycling?type=SHOES"><img style="padding: 5px; max-width: 40px; margin-bottom: 10px; {{ !empty($_GET['type']) && $_GET['type'] == 'SHOES' ? 'border: black 1px solid' : '' }}" src="/images/recycling/SHOES.png" alt="SHOES"></a><br>
+                    <span>SHOES</span>
+                </div>
+                <div class="col-12">
+                <table class="table table-striped" style="width: 80%; margin-left: auto; margin-right: auto; margin-bottom: 30px; margin-top: 30px;">
                     <thead>
                         <tr>
                             <th width="20%">Name</th>
                             <th width="25%">Address</th>
+                            <th width="55%"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -88,7 +157,7 @@
                                             <img style="max-width: 40px; margin-bottom: 10px;" src="/images/recycling/MIXED.png" alt="MIXED">
                                         @endif
                                         @if($centre->CANS_TINS == "Yes")
-                                            <img style="max-width: 40px; margin-bottom: 10px;" src="/images/recycling/CANS_TINS.png" alt="CANS_TINS">
+                                            <img style="max-width: 40px; margin-bottom: 10px;" src="/images/recycling/TINS_CANS.png" alt="CANS_TINS">
                                         @endif
                                         @if($centre->TEXTILES == "Yes")
                                             <img style="max-width: 40px; margin-bottom: 10px;" src="/images/recycling/TEXTILES.png" alt="TEXTILES">
@@ -121,6 +190,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                </div>
             </div>
             <!--/social-box-->
         </div><!--/.col-->
