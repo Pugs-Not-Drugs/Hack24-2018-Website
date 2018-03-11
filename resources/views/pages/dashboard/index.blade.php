@@ -36,7 +36,9 @@
             <div class="col-lg-3 col-md-3">
                 <div class="social-box twitter" style="min-height: 800px;">
                     <i class="fa fa-twitter"></i>
-                    <a class="twitter-timeline" href="https://twitter.com/eco_notts?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <div style="padding: 20px;">
+                        <a class="twitter-timeline" href="https://twitter.com/eco_notts?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
                 </div>
                 <!--/social-box-->
             </div><!--/.col-->
