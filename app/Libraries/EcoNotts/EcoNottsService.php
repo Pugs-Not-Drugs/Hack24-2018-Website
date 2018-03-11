@@ -13,6 +13,7 @@ class EcoNottsService
     public function __construct(Client $guzzle)
     {
         $this->endpoint = "https://econotts-api.azurewebsites.net/api/";
+        // $this->endpoint = "http://51f45d52.ngrok.io/api/";
         $this->guzzle = $guzzle;
     }
 

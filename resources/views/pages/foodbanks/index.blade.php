@@ -53,28 +53,55 @@
         <!-- End Twitter Feed -->
 
         
+        <style>
         
+        </style>
         <!-- Twitter Feed -->
-        <div class="col-lg-6 col-md-6">
+        <div class="col-lg-12 col-md-12">
             <div class="social-box pollution">
                 <i class="fa fa-anchor"></i>                    
-                {{--  <div id="div-bankometer"></div>
-                <p><a href="straws/report">Click here to report a straw</a></p>  --}}
+                <table class="table table-striped" style="width: 80%; margin-left: auto; margin-right: auto; margin-bottom: 30px;">
+                    <thead>
+                        <tr>
+                            <th width="20%">Name</th>
+                            <th width="25%">Address</th>
+                            <th width="25%">Items Needed</th>
+                            <th width="40%">Drop Off</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($foodbanks as $foodbank)
+                            <tr>
+                                <td>{{ $foodbank->name }}</td>
+                                <td>{{ implode(', ', $foodbank->address) }}</td>
+                                {{--  <td>{{ var_dump($foodbank->items_needed) }}</td>  --}}
+                                <td class="td-foodbank-icons">
+                                    @foreach($foodbank->items_needed as $item_needed)
+                                        <img src="/images/icons/{{ str_replace('/', '_', str_replace(' ', '', strtolower($item_needed))) }}.png" style='max-width: 40px;'> {{ $item_needed }}<br>
+                                    @endforeach                                 
+                                </td>
+                                <td>
+                                    @if(!empty($foodbank->food_dropoff))
+                                        @if(is_array($foodbank->food_dropoff))
+                                            @foreach($foodbank->food_dropoff as $dropoff_point)
+                                                {{ $dropoff_point }}<br>
+                                            @endforeach
+                                        @else
+                                            {{ $foodbank->food_dropoff }}
+                                        @endif
+                                    @endif
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
             <!--/social-box-->
         </div><!--/.col-->
         <!-- End Twitter Feed -->
 
 
-        
-        <!-- Twitter Feed -->
-        <div class="col-lg-6 col-md-6">
-            <div class="social-box recycle">
-                <i class="fa fa-recycle"></i>
-            </div>
-            <!--/social-box-->
-        </div><!--/.col-->
-        <!-- End Twitter Feed -->
+    
    
     </div> <!-- .content -->
 
@@ -112,7 +139,7 @@
                     position: {lat: parseFloat(markers[i].latitude), lng: parseFloat(markers[i].longitude)},
                     map: map,
                     title: markers[i].name,
-                    html: getInfoWindow(markers[i].name)
+                    html: getInfoWindow(markers[i].name, markers[i].address.join(', '), markers[i].items_needed)
                 });
 
                 google.maps.event.addListener(marker, 'click', function () {
@@ -137,8 +164,13 @@
 
         }
 
-        function getInfoWindow(name) {
-            return "<h1>" + name + "</h1>";
+        function getInfoWindow(name, address, needs) {
+            var content = "<div class='info-window'><h1>" + name + "</h1><br><p><b>Address: </b><br>" + address + "<br><br><b>Needs: </b><br>";
+            for(var j = 0; j < needs.length; j++) {
+                content += needs[j] + "<br>";
+            }
+            content += "</p></div>";
+            return content;
         }
 
         

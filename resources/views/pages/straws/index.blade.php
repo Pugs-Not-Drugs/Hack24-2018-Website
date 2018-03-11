@@ -59,7 +59,7 @@
             <div class="social-box pollution">
                 <i class="fa fa-anchor"></i>                    
                 <div id="div-turtleometer"></div>
-                <p><a href="straws/report">Click here to report a straw</a></p>
+                <p><a class="btn btn-primary" href="straws/report" style="color: white !important; margin-top: 10px; font-size: 12px; background-color: #5E9950; border-color: #5E8850; margin-bottom: 30px;">Click here to report a straw</a></p>
             </div>
             <!--/social-box-->
         </div><!--/.col-->
@@ -144,7 +144,7 @@
         }
 
         function getInfoWindow(name, happyStraws, sadStraws) {
-            return "<h1>" + name + "</h1><p>" + (happyStraws > sadStraws ? "This place loves turtles!" : "This place doesn't care about turtles!") + "</p><p>They have a " + parseInt(( 100 / (happyStraws + sadStraws) ) * happyStraws) + "% happy turtle rating!</p>";
+            return "<div class='info-window'><h1>" + name + "</h1><p>" + (happyStraws > sadStraws ? "This place loves turtles!" : "This place doesn't care about turtles!") + "</p><p>They have a " + parseInt(( 100 / (happyStraws + sadStraws) ) * happyStraws) + "% happy turtle rating!</p></div>";
         }
 
         

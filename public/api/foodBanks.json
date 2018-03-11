@@ -10,8 +10,8 @@
         ],
         "food_dropoff": "Hope House, Mon to Thur 0930 - 1530",
         "items_needed": [
-            "Tinned Meat",
-            "Carton of Long Life Juice"
+            "Tinned Meat & Fish",
+            "Carton of Juice"
         ],
         "items_plenty": [
             "Beans",
@@ -19,7 +19,7 @@
             "Pasta",
             "Cereal",
             "Biscuits"
-        ] ,
+        ],
         "latitude": "52.9341373",
         "longitude": "-1.2176444"
     },
@@ -45,17 +45,17 @@
             "Tinned Tomatoes",
             "Pasta Sauces",
             "Tinned Vegetables",
-            "Tinned Meat and Fish",
-            "Tinned Fruit and Puddings",
-            "Biscuits, Chocolate,Snacks",
+            "Tinned Meat & Fish",
+            "Tinned Fruit & Puddings",
+            "Biscuits, Chocolate, Snacks",
             "Sugar",
             "Coffee",
             "Rice",
             "Potatoes",
-            "Tea Bags (80'S)",
+            "Tea Bags",
             "Toiletries -Toothpaste, Toothbrushes, Razors, Sanitary Supplies",
             "Shower gel, Toilet Paper",
-            "Breakfast Cereals",
+            "Cereal",
             "Cleaning Products",
             "Can Openers"
         ],
@@ -95,7 +95,7 @@
         "longitude": "-1.1723989"
     },
     {
-         "name": "Bestwood & Bulwell Foodbank",
+        "name": "Bestwood & Bulwell Foodbank",
         "address": [
             "St Philip's Church",
             "Knights Close, off Old Farm Road",
@@ -112,29 +112,25 @@
             "Tinned Fruit",
             "Dried Milk Powder",
             "Rice Pudding",
-            "Tinned Fish",
+            "Tinned Meat & Fish",
             "Men's Toiletries"
         ],
         "items_plenty": [
             "Beans",
-            "Breakfast Cereal",
+            "Cereal",
             "Pasta"
         ],
         "latitude": "53.0049679",
         "longitude": "-1.1718383"
     },
     {
-         "name": "Long Eaton & Sawley Foodbank",
+        "name": "Long Eaton & Sawley Foodbank",
         "address": [
             "Christ Church Methodist Church",
             "1 College Street ",
             "Long Eaton",
             "Nottingham",
-            "NG10 4NE",
-            "165 Wilmot Street ",
-            "Sawley",
-            "Nottingham",
-            "NG10 3EL"
+            "NG10 4NE"
         ],
         "food_dropoff": [
             "Tesco Long Eaton, 24h most days",
@@ -145,16 +141,16 @@
         "items_needed": [
             "Tinned Tomatoes",
             "Tinned Fruit",
-            "Long Life Milk",
+            "UHT Milk",
             "Long Life Fruit Juice",
             "Dried Potato Packets",
             "Chocolate",
-            "Crisps/Snacks",
+            "Crisps/ Snacks",
             "Coffee"
         ],
         "items_plenty": [
             "Tinned Soup",
-            "Tinned Meat",
+            "Tinned Meat & Fish",
             "Pasta Sauce",
             "Tinned Vegetables",
             "Baked Beans",
@@ -166,7 +162,7 @@
         "longitude": "-1.2840793"
     },
     {
-          "name": "Coalville Foodbank",
+        "name": "Coalville Foodbank",
         "address": [
             "New Life Church",
             "Margaret Street",
@@ -181,7 +177,7 @@
         ],
         "items_needed": [
             "Chocolate Bars (e.g. KitKats, Penguines)",
-            "Long Life Juice",
+            "Long Life Fruit Juice",
             "Instant Coffee",
             "Sugar",
             "UHT Milk"
@@ -196,7 +192,7 @@
         "longitude": "-1.3780677"
     },
     {
-         "name": "Ashby Foodbank",
+        "name": "Ashby Foodbank",
         "address": [
             "1 Trinity Close",
             "Ashby de la Zouch",
@@ -208,10 +204,10 @@
         ],
         "items_needed": [
             "Tinned Fruit",
-            "Tea Bags (80s)",
+            "Tea Bags",
             "Dried Pasta",
             "UHT Milk",
-            "Breakfast Cereals"
+            "Cereal"
         ],
         "items_plenty": [
             "Beans",
@@ -221,7 +217,7 @@
         "longitude": "-1.4787489"
     },
     {
-         "name": "Rutland Foodbank",
+        "name": "Rutland Foodbank",
         "address": [
             "Rear of 40 Melton Road",
             "Oakham",
@@ -238,18 +234,13 @@
         "items_needed": [
             "Sponge Puddings",
             "Packets of Mash",
-            "Long Life Milk",
+            "UHT Milk",
             "Long Life Fruit Juice",
-            "Small Sugar (500g)",
-            "Toilet Rolls",
-            "Razors",
-            "Shaving Foam/ Gel",
-            "Deodrant",
-            "Washing Up Liquid",
-            "Washing Powder/ Gel"
+            "Sugar",
+            "Toiletries -Toothpaste, Toothbrushes, Razors, Sanitary Supplies"
         ],
         "items_plenty": [
-            "Cereals & Porridge",
+            "Cereal",
             "Baked Beans",
             "Tea",
             "Toothpaste & Brushes",

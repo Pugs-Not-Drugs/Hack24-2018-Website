@@ -1,0 +1,81 @@
+[
+    {
+        name: "East Nottingham Foodbank",
+        address: ["Hope House", "Boundary Road","Beeston", "Nottingham", "NG9 2RF"]
+        food_dropoff: "Hope House, Mon to Thur 0930 - 1530"
+        items_needed: ["Tinned Meat", "Carton of Long Life Juice"]
+        items_plenty: ["Beans","Chopped Tomatoes", "Pasta", "Cereal", "Biscuits"] 
+		lat_long: "52.9341373,-1.2176444,17"       
+    },
+    {
+        name: "Arnold Foodbank",
+        address: ["Daybrook Baptist Church", "Mansfield Road", "Nottingham", "NG5 6AA"]
+        food_dropoff: ["Daybrook Baptist Church, Mon, Wed & Fri 1330 - 1500", "Arnot Hill Civic Centre Foyer, 0900 - 1300", "Carlton Forum Leisure Centre, 0900 - 2200", "Asda Arnold, 0700 - 2300", "Coppice Road Coop, 0700 - 2200", "Kings Church Arnold, Sunday before/ after service (10.30)", "Arnold Methodist Church, Sunday before/ after service (10.45)", "Arnold Salvation Army, Sunday before/ after service (10.30)"]
+        items_needed: ["Tinned Tomatoes", "Pasta Sauces", "Tinned Vegetables", "Tinned Meat and Fish", "Tinned Fruit and Puddings", "Biscuits, Chocolate,Snacks", "Sugar", "Coffee","Rice", "Potatoes", "Tea Bags (80'S)",  "Toiletries -Toothpaste, Toothbrushes, Razors, Sanitary Supplies", "Shower gel, Toilet Paper", "Breakfast Cereals", "Cleaning Products", "Can Openers"]
+        items_plenty: ["Beans"]
+		lat_long: "52.9958099,-1.1398624,17"  
+        
+ },
+{
+        name: "Clifton Foodbank",
+        address: ["Hope Centre", "Southchurch Drive", "Clifton", "Nottingham", "NG11 8AQ"]
+        food_dropoff: ["Morrisons Clifton, 0700 - 2200", "Coop Clifton & Ruddington, 0600 - 2300", "Asda West Bridgford, 24/7"]
+        items_needed: ["Sponge Puddings", "Tinned Tomatoes", "Carrier Bags", "Instant Mashed Potato", "UHT Milk"]
+        items_plenty: ["Beans", "Sugar", "Pasta"]
+		lat_long: "52.9110859,-1.1723989,17"
+ },
+ 
+ {
+         name: "Bestwood & Bulwell Foodbank",
+        address: ["St Philip's Church", "Knights Close, off Old Farm Road", "Top Valley", "Nottingham", "NG5 9AJ"]
+        food_dropoff: ["Tesco Extra Jennison St Bulwell, 0600 - 2300", "Tesco Extra, Top Valley Dr, 24h", "St Philip’s Church, Knights Close, Tue 1000 - 1500, Thur 1300 - 1500, Sat 1000 - 1200"]
+        items_needed: ["Tinned Fruit", "Dried Milk Powder", "Rice Pudding", "Tinned Fish", "Men's Toiletries"]
+        items_plenty: ["Beans", "Breakfast Cereal", "Pasta"]
+		lat_long: "53.0049679,-1.1718383,17"
+  },
+ 
+ {
+         name: "Long Eaton & Sawley Foodbank",
+        address: ["Christ Church Methodist Church", "1 College Street ", "Long Eaton", "Nottingham", "NG10 4NE", "165 Wilmot Street ", "Sawley", "Nottingham", "NG10 3EL"]
+        food_dropoff: ["Tesco Long Eaton, 24h most days", "Long Eaton Library, Mon & Tue 0900 - 1700, Wed to Fri 0900 - 1900, Sat 0900 - 1600", "McColl’s Tamworth Road, 0700 - 2200", "Coop Sawley Draycott Road, 0700 - 2200"]
+        items_needed: ["Tinned Tomatoes", "Tinned Fruit", "Long Life Milk", "Long Life Fruit Juice", "Dried Potato Packets", "Chocolate", "Crisps/Snacks", "Coffee"]
+        items_plenty: ["Tinned Soup", "Tinned Meat", "Pasta Sauce", "Tinned Vegetables", "Baked Beans","Biscuits", "Dried Pasta", "Tinned Spaghetti"]
+		lat_long: "52.9020526,-1.2840793,17", "52.884503,-1.3043502,17"
+  },
+  
+  {
+          name: "Coalville Foodbank",
+        address: ["New Life Church", "Margaret Street", "Coalville", "Leicestershire", "LE67 3LY"]
+        food_dropoff: ["Tesco Extra Ashby De La Zouch, 0800 - 2200", "Coop Coalville Bridge Road, 0900 - 1900", "New Life Church Coalville Margaret Street, Tue & Fri 1000 - 1200"]
+        items_needed: ["Chocolate Bars (e.g. KitKats, Penguines)", "Long Life Juice", "Instant Coffee", "Sugar", "UHT Milk"]
+        items_plenty: ["Beans", "Tea Bags", "Soup", "Cereal"]
+		lat_long: "52.7242746,-1.3780677,17"
+   },
+ {
+         name: "Ashby Foodbank",
+        address: ["1 Trinity Close", "Ashby de la Zouch", "Leicestershire", "LE65 2GQ"]
+        food_dropoff: ["Tesco Resolution Road Ashby-de-la-Zouch, Mon to Sat 24h, Sun 1000 - 1600"]
+        items_needed: ["Tinned Fruit", "Tea Bags (80s)", "Dried Pasta", "UHT Milk", "Breakfast Cereals"]
+        items_plenty: ["Beans", "Sugar"]
+		lat_long: "52.7458055,-1.4787489"
+  },
+ 
+ {
+         name: "Rutland Foodbank",
+        address: ["Rear of 40 Melton Road", "Oakham", "LE15 6AY"]
+        food_dropoff: ["All Saints Church Church Street , 0900 - 1730", "Coop Burley Road, Mon to Fri 0730 - 2100, Sat 0730 - 2000, Sun 1000 - 1600", "Coop Braunstone Road, 0700 - 2200", "Tesco, Mon to Sat 0800 - 2200, Sun 1000 - 1600", "Briars Stores Churchill Road, Mon & Tue 0700 - 2000, Wed to Sat 0700 - 2030, Sun 0800 - 2000", "Other local churches, 0900 - 1700"]
+        items_needed: ["Sponge Puddings", "Packets of Mash", "Long Life Milk", "Long Life Fruit Juice", "Small Sugar (500g)", "Toilet Rolls", "Razors", "Shaving Foam/ Gel", "Deodrant", "Washing Up Liquid", "Washing Powder/ Gel"]
+        items_plenty: ["Cereals & Porridge", "Baked Beans", "Tea", "Toothpaste & Brushes", "Pasta & Pasta Sauces", "Fizzy Drinks & Cordials", "Most Tinned Goods", "Shower Gel & Soap"]
+		lat_long: "52.6706591,-0.7361031,16.94"
+  },
+ 
+ 
+]
+
+
+
+Add CommentCollapse 
+Message Input
+
+
+Message @stephenbrown90

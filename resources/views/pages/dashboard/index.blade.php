@@ -49,7 +49,7 @@
                         <i class="fa fa-anchor"></i>
 
                         <div id="div-turtleometer"></div>
-                        <p><a href="straws/report">Click here to report a straw</a></p>
+                        <p><a href="straws/report" class='btn btn-primary' style="color: white !important; margin-top: 10px; font-size: 12px; background-color: #5E9950; border-color: #5E8850; margin-bottom: 30px;">Click here to report a straw</a></p>
                     </div>
                     <!--/social-box-->
                 </div><!--/.col-->
@@ -82,17 +82,25 @@
                     <div class="social-box recycle">
                         <i class="fa fa-recycle"></i>
                         <p>Most Needed Items in Nottingham</p>
-                        <p>
-                            <ul>
-                                <?php $num = 0; ?>
-                                @foreach($foodbankNeeds as $foodbankNeed => $number)
-                                <?php if($num < 10) { ?>
-                                    <li>{{ $foodbankNeed }}</li>
+                        <table class="table table-striped" style="width: 80%; margin-left: auto; margin-right: auto; margin-bottom: 30px;">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Item</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php $num = 1; ?>
+                                @foreach(array_slice($foodbankNeeds, 0, 10) as $foodbankNeed => $number)
+                                    <tr>
+                                        <td>{{ $num }}</td>
+                                        <td>{{ $foodbankNeed }}</td>
+                                    </tr>
                                     <?php $num += 1; ?>
-                                <?php } ?>
                                 @endforeach
-                            </ul>
-                        </p>
+                            </tbody>
+                        </table>
+                       
                     </div>
                     <!--/social-box-->
                 </div><!--/.col-->
